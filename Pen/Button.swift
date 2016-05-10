@@ -25,6 +25,8 @@ class Button: UIView {
 		self.ball.layer.shadowOpacity = 0.3
 		self.addSubview(self.ball)
 		
+		//This sublayer I add is because for some odd reason, you can't have a single CALayer have a corner radius, mask to bounds, AND have a shadow. But we need clipping for the layer that has a border, as seen below, so we delegate the shadow the above layer which has no clipping. Fun stuff! 
+		
 		let sl = CALayer()
 		sl.frame = CGRect(origin: CGPointZero, size: self.ball.frame.size)
 		sl.backgroundColor = UIColor.clearColor().CGColor
@@ -46,6 +48,8 @@ class Button: UIView {
 			
 			}, completion: nil)
 	}
+	
+	//Very primitive functions we override to know when a finger touches, moves, and releases from this class's frame.
 	
 	override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
 		super.touchesBegan(touches, withEvent: event)
@@ -73,7 +77,10 @@ class Button: UIView {
 		super.touchesEnded(touches, withEvent: event)
 		
 		self.revert()
+		appDelegate.main.evaluateIfShouldSelect()
 	}
+	
+	
 	
 	required init?(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)

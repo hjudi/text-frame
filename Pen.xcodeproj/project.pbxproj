@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A702B71E1CE2379300D66B78 /* help.swift in Sources */ = {isa = PBXBuildFile; fileRef = A702B71D1CE2379300D66B78 /* help.swift */; };
 		A77E40061CE0DA6600FF8797 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77E40051CE0DA6600FF8797 /* AppDelegate.swift */; };
-		A77E40081CE0DA6600FF8797 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77E40071CE0DA6600FF8797 /* ViewController.swift */; };
+		A77E40081CE0DA6600FF8797 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77E40071CE0DA6600FF8797 /* MainViewController.swift */; };
 		A77E400D1CE0DA6600FF8797 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A77E400C1CE0DA6600FF8797 /* Assets.xcassets */; };
 		A77E401A1CE13FC300FF8797 /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77E40191CE13FC300FF8797 /* Button.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A702B71D1CE2379300D66B78 /* help.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = help.swift; sourceTree = "<group>"; };
 		A77E40021CE0DA6600FF8797 /* Pen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A77E40051CE0DA6600FF8797 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A77E40071CE0DA6600FF8797 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A77E40071CE0DA6600FF8797 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		A77E400C1CE0DA6600FF8797 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A77E40111CE0DA6600FF8797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A77E40191CE13FC300FF8797 /* Button.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
@@ -53,8 +55,9 @@
 			isa = PBXGroup;
 			children = (
 				A77E40051CE0DA6600FF8797 /* AppDelegate.swift */,
-				A77E40071CE0DA6600FF8797 /* ViewController.swift */,
+				A77E40071CE0DA6600FF8797 /* MainViewController.swift */,
 				A77E40191CE13FC300FF8797 /* Button.swift */,
+				A702B71D1CE2379300D66B78 /* help.swift */,
 				A77E400C1CE0DA6600FF8797 /* Assets.xcassets */,
 				A77E40111CE0DA6600FF8797 /* Info.plist */,
 			);
@@ -130,8 +133,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A77E40081CE0DA6600FF8797 /* ViewController.swift in Sources */,
+				A77E40081CE0DA6600FF8797 /* MainViewController.swift in Sources */,
 				A77E401A1CE13FC300FF8797 /* Button.swift in Sources */,
+				A702B71E1CE2379300D66B78 /* help.swift in Sources */,
 				A77E40061CE0DA6600FF8797 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -267,6 +271,7 @@
 				A77E40161CE0DA6600FF8797 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
