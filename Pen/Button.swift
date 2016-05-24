@@ -42,7 +42,7 @@ class Button: UIView {
 	
 	func revert() {
 		
-		UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .CurveEaseInOut, animations: {
+		UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: UIViewAnimationOptions.CurveEaseInOut.union(.AllowUserInteraction), animations: {
 			
 			self.ball.layer.transform = CATransform3DMakeScale(1, 1, 1)
 			
@@ -54,7 +54,7 @@ class Button: UIView {
 	override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
 		super.touchesBegan(touches, withEvent: event)
 		
-		UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: .CurveEaseInOut, animations: {
+		UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 1, options: UIViewAnimationOptions.CurveEaseInOut.union(.AllowUserInteraction), animations: {
 			
 			self.ball.layer.transform = CATransform3DMakeScale(1.3, 1.3, 1.3)
 			
