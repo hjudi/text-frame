@@ -14,6 +14,7 @@ class MainViewController: UIViewController, UITextViewDelegate {
 	
 	var textView : UITextView!
 	var button : Button!
+	var bar : UIView!
 	
 	override func prefersStatusBarHidden() -> Bool {
 		return true
@@ -34,7 +35,7 @@ class MainViewController: UIViewController, UITextViewDelegate {
 		self.textView = UITextView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
 		self.textView.delegate = self
 		self.textView.backgroundColor = .clearColor()
-		self.textView.textContainerInset = UIEdgeInsets(top: 20, left: 10, bottom: 0, right: 10)
+		self.textView.textContainerInset = UIEdgeInsets(top: 20, left: 10, bottom: 0, right: 20)
 		self.textView.clipsToBounds = true
 		self.textView.editable = false
 		self.textView.selectable = false
@@ -61,8 +62,11 @@ class MainViewController: UIViewController, UITextViewDelegate {
 		self.textView.addGestureRecognizer(gr)
 		
 		//Our happy little copy bubble
-		self.button = Button(frame: CGRect(x: self.view.bounds.width-85, y: self.view.bounds.height-88, width: 85, height: 85))
+		self.button = Button(frame: CGRect(x: self.view.bounds.width-85-12, y: self.view.bounds.height-88, width: 85, height: 85))
 		self.view.addSubview(self.button)
+		
+		self.bar = Bar(frame: CGRect(x: self.view.frame.width-12, y: 0, width: 12, height: self.view.frame.height))
+		self.view.addSubview(self.bar)
 	}
 	
 	func scrollViewDidScroll(scrollView: UIScrollView) {
